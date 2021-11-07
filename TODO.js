@@ -21,27 +21,38 @@ function deleteTask(taskToDelet){
         delete list[taskToDelet];    
     }
 function showList(){
-       for (key in list){
+    console.log("TODO:");
+        for (let key in list){
             if (list[key] === 'To Do'){
                 console.log(key);
-
-            } else if (list[key] === 'Done'){
+            }
+        }
+          
+            
+    console.log("Done:");
+        for (let key in list){
+           if (list[key] === 'Done'){
                  console.log(key);
-
-            }else if (list[key] === 'In Progress'){
+            }
+        }
+         
+   
+    console.log("In Progress:"); 
+        for (let key in list) {      
+            if (list[key] === 'In Progress'){
                  console.log(key);
             }
        }
-}    
+}  
 showList() 
 
 
 
-addTask("go for a walk");
+/*addTask("go for a walk");
 deleteTask("cook a dinner");
 changeStatus("do homework", "Done");
 addTask("read the book");
-changeStatus("read the book", "In Progress");
+changeStatus("read the book", "In Progress");*/
 
 
 
